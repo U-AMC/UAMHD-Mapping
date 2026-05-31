@@ -93,9 +93,7 @@ In short: you may use, modify, and share this work **non-commercially**, with **
 derivatives must be shared under the **same license**. **Commercial use requires separate permission** —
 contact marimo117@urobotics.ai.
 
-If you use this design in academic research, please cite:
-```
-<CITATION(S)>
-```
+If you use this design in academic research, please cite our work.
+The associated paper is currently under review — citation will be added here upon acceptance.
 
 For technical issues, contact marimo117@urobotics.ai.
