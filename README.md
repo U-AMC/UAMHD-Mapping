@@ -5,7 +5,7 @@ This repository provides the CAD files of UAMHD (Universal Adapter for Mapping H
 
 All printable modules are designed to be [*FDM (Fused Deposition Modeling)*](https://en.wikipedia.org/wiki/Fused_filament_fabrication) printable.
 
-We release the printable parts as **STL** files (under `release/`), which can be sliced and printed directly, together with the bill of materials (§5) listing the off-the-shelf components you need to source. Editable CAD source is **not** included. Scripts to bring up the sensors and record data live under `setup/` (see §4).
+We release the printable parts as **STL** files (under `release/`), which can be sliced and printed directly, together with the [bill of materials](./BOM.md) listing the off-the-shelf components you need to source. Editable CAD source is **not** included. Scripts to bring up the sensors and record data live under `setup/` (see §4).
 
 **Designer**: U-AMC (Jason Kim)
 
@@ -32,7 +32,7 @@ The electronic-connection guide:
 ## 3. Printing the parts
 All printable parts are provided as ready-to-print **STL** meshes under `release/`. Import them directly into your slicer (Cura, PrusaSlicer, etc.) and print — no CAD software required.
 
-> Editable CAD source is not distributed with this release; only the STL meshes and the bill of materials (§5) are provided.
+> Editable CAD source is not distributed with this release; only the STL meshes and the [bill of materials](./BOM.md) are provided.
 
 ## 4. Software setup (data acquisition)
 The `setup/` directory holds the scripts that bring up the sensors and record data on the onboard computer. They assume **Ubuntu 22.04 + ROS 2 Humble** and target a sensor stack of Livox LiDAR(s) + a Luxonis Oak-D Pro camera, time-synced over PTP and transported with Fast DDS.
@@ -78,15 +78,11 @@ cd setup
 
 > The recorded topics (`bag_record.sh`) and the launched drivers/models (`sensor_bringup.sh`) are specific to this sensor set. Edit those two scripts to match your LiDAR models, camera, and topic names.
 
-## 5. Material list (for reference only)
-Availability is not guaranteed.
+## 5. Bill of Materials
 
-| Item | Pic | Purchasing link |
-| :--: | :-: | :-------------: |
-| <COMPONENT_1> | <img src="./pics/<component_1>.png" width="40%" /> | [<vendor>](<url>) |
-| <COMPONENT_2> | <img src="./pics/<component_2>.png" width="40%" /> | [<vendor>](<url>) |
-| <COMPONENT_3> *(optional)* | <img src="./pics/<component_3>.png" width="40%" /> | [<vendor>](<url>) |
-<!-- TODO: one row per off-the-shelf component (sensor, battery, camera, lens, power board, ...) -->
+### → [View full BOM](./BOM.md)
+
+The BOM lists all printable parts (with links to their STL files) and the off-the-shelf components required to build UAMHD. Availability of purchased components is not guaranteed.
 
 ## 6. License
 This work — CAD/STL files, documentation, images, and setup scripts — is released under the
